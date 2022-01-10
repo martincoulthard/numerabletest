@@ -11,9 +11,9 @@
   const url = window.location.href
   const stringArray = url.split("=")
   const searchString = stringArray[1]
-  const iframeUrl = "https://app-staging.numerable.io/search/?source=350club&scope=companies&search-string=" + searchString
+  // const iframeUrl = "https://app-staging.numerable.io/search/?source=350club&scope=companies&search-string=" + searchString
   // const iframeUrl = "http://localhost:3000/search/?source=350club&scope=companies&search-string=" + searchString
-  // const iframeUrl = "http://localhost:3000/lse/"
+  const iframeUrl = "http://localhost:3000/lse/"
   console.log("iframeUrl: " + iframeUrl)
  
   let ifrm = document.createElement("iframe")
