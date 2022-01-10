@@ -3,5 +3,28 @@
 <body>
 <h1>Testing Numerable in an iframe</h1>
 <p>I'm hosted with GitHub Pages.</p>
+  
+<div id="iframecontainer" >
+</div>
+
+<script type="text/javascript">
+  const url = window.location.href
+  const stringArray = url.split("=")
+  const searchString = stringArray[1]
+  const iframeUrl = "https://app-staging.numerable.io/search/?source=350club&scope=companies&search-string=" + searchString
+  // const iframeUrl = "http://localhost:3000/search/?source=350club&scope=companies&search-string=" + searchString
+  // const iframeUrl = "http://localhost:3000/lse/"
+  console.log("iframeUrl: " + iframeUrl)
+ 
+  let ifrm = document.createElement("iframe")
+  ifrm.setAttribute("src", iframeUrl)
+  ifrm.style.width = "100%"
+  ifrm.style.height = "800px"
+  ifrm.style.border = "1px solid grey"
+
+  let iframeContainer = document.getElementById("iframecontainer")
+  iframeContainer.appendChild(ifrm)
+</script>  
+  
 </body>
 </html>
